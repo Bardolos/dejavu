@@ -1,6 +1,6 @@
 # HOW TO BUILD
 
-1. clone this repo `git clone https://github.com/meiraj-blip/dejavu`
+1. clone this repo `git clone https://github.com/Bardolos/dejavu`
 2. `cd dejavu`
 3. `yarn install` (you can do `brew install yarn` first if you don't have yarn)
 4. `git submodule init && git submodule update`
