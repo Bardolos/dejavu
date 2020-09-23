@@ -79,11 +79,13 @@ export const putData = async (
 		const { url } = parseUrl(rawUrl);
 		const headers = getHeaders(rawUrl);
 		const customHeaders = getCustomHeaders(indexName);
-		let baseUrl = `${url}/${indexName}/${typeName}/${docId}`;
+		let baseUrl = `${url}/${indexName}/${typeName}/${docId}?refresh=wait_for`;
 
-		if (version > 5) {
-			baseUrl += '?refresh=wait_for';
+		if (data._routing) {
+			baseUrl += `&routing=${data._routing}`;
+			delete data._routing;
 		}
+
 		const res = await fetch(baseUrl, {
 			headers: {
 				...headers,

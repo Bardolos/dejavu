@@ -1,3 +1,16 @@
+# HOW TO BUILD
+
+1. clone this repo `git clone https://github.com/meiraj-blip/dejavu`
+2. `cd dejavu`
+3. `yarn install` (you can do `brew install yarn` first if you don't have yarn)
+4. `git submodule init && git submodule update`
+5. `yarn build:chrome-extension`
+6. go to `chrome://extensions/` and click "Load Unpacked" (if you don't have this, enable developer mode)
+6. select this directory `packages/dejavu-main/dist/app` (the dist part is important)
+7. done
+
+
+
 # dejavu: The missing Web UI for Elasticsearch
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/appbaseio/dejavu/dev/LICENSE.md) ![React Version](https://img.shields.io/badge/react-v16.6-brightgreen.svg)
