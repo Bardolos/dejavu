@@ -2,12 +2,14 @@
 
 1. clone this repo `git clone https://github.com/Bardolos/dejavu`
 2. `cd dejavu`
-3. `yarn install` (you can do `brew install yarn` first if you don't have yarn)
-4. `git submodule init && git submodule update`
-5. `yarn build:chrome-extension`
-6. go to `chrome://extensions/` and click "Load Unpacked" (if you don't have this, enable developer mode)
-6. select this directory `packages/dejavu-main/dist/app` (the dist part is important)
-7. done
+3. `brew install yarn` first if you don't have yarn
+4. `yarn config set "strict-ssl" false` if you require dependencies from custom repos
+5. `yarn install` 
+6. `git submodule init && git submodule update`
+7. `yarn build:chrome-extension`
+8. go to `chrome://extensions/` and click "Load Unpacked" (if you don't have this, enable developer mode)
+9. select this directory `packages/dejavu-main/dist/app` (the dist part is important)
+10. done
 
 
 
